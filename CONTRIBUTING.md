@@ -1,1 +1,3 @@
-# Contributing\n\nThanks for your interest! Please open an issue or PR.
+# Contributing
+
+Thanks for your interest! Please open an issue or PR.
