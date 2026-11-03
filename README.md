@@ -190,6 +190,8 @@ Temp 0.7:  Sharpe 1.45, Consistency 71%
 
 ## 🛠️ Development Roadmap
 
+> 📌 As of 2026-11, [ROADMAP.md](ROADMAP.md) supersedes the phases below. / 2026 年 11 月起以 [ROADMAP.md](ROADMAP.md) 为准。
+
 ### Phase 1: Core Framework (Weeks 1-3)
 - [ ] Basic backtesting engine with event-driven architecture
 - [ ] Data handlers for CSV, Parquet, and API sources
