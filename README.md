@@ -4,6 +4,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-pre--alpha-orange.svg)](ROADMAP.md)
+
+> ⚠️ **Status: pre-alpha (design stage).** No code has been released yet. The examples below show the target API and may change; see [ROADMAP.md](ROADMAP.md) for what is being built and when.
 
 ## 🎯 Why This Project?
 
@@ -29,7 +32,7 @@ Traditional backtesting frameworks (Backtrader, Zipline, VectorBT) are designed 
 - 💰 **Token Cost Tracking**: Per-model pricing with detailed cost breakdown
 - 🌡️ **Temperature Sweep**: Test strategy robustness across LLM randomness
 - 🧠 **Context Window Simulation**: Track token usage and context limits
-- 🔀 **Multi-Model Comparison**: Compare GPT-4, Claude, Gemini side-by-side
+- 🔀 **Multi-Model Comparison**: Compare OpenAI, Anthropic, Gemini, DeepSeek and local models side-by-side
 
 ### Analysis & Visualization
 - 📉 Decision path visualization with reasoning traces
@@ -48,7 +51,7 @@ llm-backtest-framework/
 │   └── execution.py        # Order execution simulation
 ├── llm/
 │   ├── base_adapter.py     # Abstract LLM interface
-│   ├── openai_adapter.py   # GPT-4/GPT-4o support
+│   ├── openai_adapter.py   # OpenAI models
 │   ├── anthropic_adapter.py # Claude support
 │   ├── mock_adapter.py     # Deterministic testing
 │   ├── latency_model.py    # API latency simulation
@@ -77,9 +80,7 @@ llm-backtest-framework/
 ### Installation
 
 ```bash
-pip install llm-backtest-framework
-
-# Or from source
+# Not on PyPI yet -- install from source for now
 git clone https://github.com/Caesarcph/llm-backtest-framework.git
 cd llm-backtest-framework
 pip install -e .
@@ -93,7 +94,7 @@ from llm_backtest.llm import ClaudeAdapter, CostTracker
 
 # Initialize LLM with cost tracking
 llm = ClaudeAdapter(
-    model="claude-sonnet-4-20250514",
+    model="<anthropic-model-id>",  # pick a current model from your provider
     latency_mode="realistic",  # Simulates actual API delays
     cost_tracker=CostTracker()
 )
@@ -226,18 +227,20 @@ Temp 0.7:  Sharpe 1.45, Consistency 71%
 
 | Data Source | Status |
 |-------------|--------|
-| Yahoo Finance | ✅ Built-in |
-| Alpha Vantage | ✅ Built-in |
+| Custom CSV/Parquet | 🔜 Planned (v0.1) |
+| MetaTrader 5 history export | 🔜 Planned (v0.1) |
+| Dukascopy ticks | 🔜 Planned (v0.1) |
+| Yahoo Finance | 🔜 Planned |
+| Alpha Vantage | 🔜 Planned |
 | Polygon.io | 🔜 Planned |
-| Custom CSV/Parquet | ✅ Built-in |
 
 | LLM Provider | Status |
 |--------------|--------|
-| OpenAI (GPT-4, GPT-4o) | ✅ Built-in |
-| Anthropic (Claude) | ✅ Built-in |
-| Google (Gemini) | ✅ Built-in |
-| Local (Ollama) | 🔜 Planned |
-| DeepSeek | 🔜 Planned |
+| OpenAI | 🔜 Planned (v0.1) |
+| Anthropic (Claude) | 🔜 Planned (v0.1) |
+| Google (Gemini) | 🔜 Planned (v0.1) |
+| DeepSeek | 🔜 Planned (v0.1) |
+| Local (Ollama / vLLM / any OpenAI-compatible server) | 🔜 Planned (v0.1) |
 
 ## 🤝 Contributing
 

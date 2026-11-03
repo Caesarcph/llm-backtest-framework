@@ -199,12 +199,12 @@ result.report("report.html")             # 自动区分截止日前 / 后的区�
 
 这些对应总计划里的 P0-08：
 
-- [ ] 集成表里的 "✅ Built-in" 全部改成 "🔜 Planned"（目前还没有代码）
-- [ ] 更新示例里过时的模型名
-- [ ] 顶部加上 "Status: pre-alpha"
+- [x] 集成表里的 "✅ Built-in" 全部改成 "🔜 Planned"（目前还没有代码）（2026-11-03 已完成）
+- [x] 更新示例里过时的模型名（2026-11-03 已完成）
+- [x] 顶部加上 "Status: pre-alpha"（2026-11-03 已完成）
 - [ ] 加一节 "Why not just use LumiBot / FINSABER / vectorbt?"，讲清楚差异化
-- [ ] 包名统一成 `llmbt`（2026-11-03 查过 PyPI 上还没被占用，建议尽快发一个占位版本）
-- [ ] `CONTRIBUTING.md` 里的字面量 `\n` 改成真正的换行
+- [ ] 包名统一成 `llmbt`（2026-11-03 查过 PyPI 上还没被占用，建议尽快发一个占位版本）——等你确认后再改，README 示例目前还是 `llm_backtest`
+- [x] `CONTRIBUTING.md` 里的字面量 `\n` 改成真正的换行（2026-11-03 已完成）
 
 ---
 
